@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <coverage generated="1325756505">
   <project timestamp="1325756505">
@@ -364,4 +363,3 @@
     <metrics files="20" loc="560" ncloc="480" classes="20" methods="36" coveredmethods="36" conditionals="0" coveredconditionals="0" statements="182" coveredstatements="182" elements="218" coveredelements="218"/>
   </project>
 </coverage>
-

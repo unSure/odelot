@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="BankAccount" default="build">
+<project name="odelot" default="build">
  <target name="build"
    depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb"/>
 
@@ -28,30 +28,12 @@
   <delete dir="${basedir}/build/pdepend"/>
  </target>
 
- <target name="prepare" depends="clean,phpab"
+ <target name="prepare" depends="clean"
          description="Prepare for build">
   <mkdir dir="${basedir}/build/code-browser"/>
   <mkdir dir="${basedir}/build/coverage"/>
   <mkdir dir="${basedir}/build/logs"/>
   <mkdir dir="${basedir}/build/pdepend"/>
- </target>
-
- <target name="phpab" description="Generate autoloader scripts">
-  <exec executable="phpab.bat">
-   <arg value="--output" />
-   <arg path="${basedir}/src/autoload.php" />
-   <arg value="--template" />
-   <arg path="${basedir}/build/src_autoload.php.in" />
-   <arg path="${basedir}/src/" />
-  </exec>
-
-  <exec executable="phpab.bat">
-   <arg value="--output" />
-   <arg path="${basedir}/tests/autoload.php" />
-   <arg value="--template" />
-   <arg path="${basedir}/build/tests_autoload.php.in" />
-   <arg path="${basedir}/tests" />
-  </exec>
  </target>
 
  <target name="lint">
